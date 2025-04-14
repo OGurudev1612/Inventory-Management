@@ -24,7 +24,53 @@
 				},
 				"description": "Returns list of all items"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Apr 2025 03:24:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"27-inch Monitor - Ultra HD\",\n        \"quantity\": 18,\n        \"price\": 165\n    },\n    {\n        \"id\": 4,\n        \"name\": \"27-inch Monitor\",\n        \"quantity\": 20,\n        \"price\": 150\n    },\n    {\n        \"id\": 5,\n        \"name\": \"USB-C Hub\",\n        \"quantity\": 40,\n        \"price\": 22.75\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Webcam\",\n        \"quantity\": 45,\n        \"price\": 49.95\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Bluetooth Speaker\",\n        \"quantity\": 35,\n        \"price\": 29.99\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Desk Lamp\",\n        \"quantity\": 70,\n        \"price\": 18.5\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Noise-Cancelling Headphones\",\n        \"quantity\": 15,\n        \"price\": 129.99\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Monitor\",\n        \"quantity\": 6,\n        \"price\": 150.75\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Create new item",
@@ -53,7 +99,62 @@
 				},
 				"description": "Creates new item"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Create new item",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Monitor\",\r\n  \"quantity\": 5,\r\n  \"price\": 150.75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Apr 2025 03:29:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 13,\n    \"name\": \"Monitor\",\n    \"quantity\": 5,\n    \"price\": 150.75\n}"
+				}
+			]
 		},
 		{
 			"name": "Update item by ID",
@@ -83,7 +184,63 @@
 				},
 				"description": "Takes in item and id and update it."
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Update item by ID",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 12,\r\n    \"name\": \"Monitor\",\r\n    \"quantity\": 6,\r\n    \"price\": 150.75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/items/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"12"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Apr 2025 03:30:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 12,\n    \"name\": \"Monitor\",\n    \"quantity\": 6,\n    \"price\": 150.75\n}"
+				}
+			]
 		},
 		{
 			"name": "Delete item by ID",
@@ -91,7 +248,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/items/2",
+					"raw": "http://localhost:8080/items/13",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -99,12 +256,55 @@
 					"port": "8080",
 					"path": [
 						"items",
-						"2"
+						"13"
 					]
 				},
 				"description": "deletes an item by item id"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Delete item by ID",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/items/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"13"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Apr 2025 03:30:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
 			"name": "Get item by ID",
@@ -125,7 +325,54 @@
 				},
 				"description": "returns item by id"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get item by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/items/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Apr 2025 03:30:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"name\": \"USB-C Hub\",\n    \"quantity\": 40,\n    \"price\": 22.75\n}"
+				}
+			]
 		},
 		{
 			"name": "Bulk add items",
@@ -155,7 +402,63 @@
 				},
 				"description": "takes items list and adds them all to the inventory"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Bulk add items",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"name\": \"Wireless Mouse\",\r\n    \"quantity\": 50,\r\n    \"price\": 15.99\r\n  },\r\n  {\r\n    \"name\": \"Mechanical Keyboard\",\r\n    \"quantity\": 30,\r\n    \"price\": 45.50\r\n  },\r\n  {\r\n    \"name\": \"27-inch Monitor\",\r\n    \"quantity\": 20,\r\n    \"price\": 150.00\r\n  },\r\n  {\r\n    \"name\": \"USB-C Hub\",\r\n    \"quantity\": 40,\r\n    \"price\": 22.75\r\n  },\r\n  {\r\n    \"name\": \"External Hard Drive\",\r\n    \"quantity\": 25,\r\n    \"price\": 89.99\r\n  },\r\n  {\r\n    \"name\": \"Laptop Stand\",\r\n    \"quantity\": 60,\r\n    \"price\": 35.25\r\n  },\r\n  {\r\n    \"name\": \"Webcam\",\r\n    \"quantity\": 45,\r\n    \"price\": 49.95\r\n  },\r\n  {\r\n    \"name\": \"Bluetooth Speaker\",\r\n    \"quantity\": 35,\r\n    \"price\": 29.99\r\n  },\r\n  {\r\n    \"name\": \"Desk Lamp\",\r\n    \"quantity\": 70,\r\n    \"price\": 18.50\r\n  },\r\n  {\r\n    \"name\": \"Noise-Cancelling Headphones\",\r\n    \"quantity\": 15,\r\n    \"price\": 129.99\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/items/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"bulk"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Apr 2025 03:30:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 15,\n        \"name\": \"Wireless Mouse\",\n        \"quantity\": 50,\n        \"price\": 15.99\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Mechanical Keyboard\",\n        \"quantity\": 30,\n        \"price\": 45.5\n    },\n    {\n        \"id\": 17,\n        \"name\": \"27-inch Monitor\",\n        \"quantity\": 20,\n        \"price\": 150\n    },\n    {\n        \"id\": 18,\n        \"name\": \"USB-C Hub\",\n        \"quantity\": 40,\n        \"price\": 22.75\n    },\n    {\n        \"id\": 19,\n        \"name\": \"External Hard Drive\",\n        \"quantity\": 25,\n        \"price\": 89.99\n    },\n    {\n        \"id\": 20,\n        \"name\": \"Laptop Stand\",\n        \"quantity\": 60,\n        \"price\": 35.25\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Webcam\",\n        \"quantity\": 45,\n        \"price\": 49.95\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Bluetooth Speaker\",\n        \"quantity\": 35,\n        \"price\": 29.99\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Desk Lamp\",\n        \"quantity\": 70,\n        \"price\": 18.5\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Noise-Cancelling Headphones\",\n        \"quantity\": 15,\n        \"price\": 129.99\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Bulk delete items",
@@ -164,7 +467,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[6,7]\r\n",
+					"raw": "[15,16,17,18,19,20,21,22,23,24]\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -185,7 +488,59 @@
 				},
 				"description": "takes list of item ids and deletes the the iems"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Bulk delete items",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[15,16,17,18,19,20,21,22,23,24]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/items/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"bulk"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Apr 2025 03:31:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
 			"name": "Bulk update items",
@@ -215,7 +570,63 @@
 				},
 				"description": "takes in list of items and updates them in the inventory"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Bulk update items",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 1,\r\n    \"name\": \"Wireless Mouse - Updated\",\r\n    \"quantity\": 60,\r\n    \"price\": 16.49\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"name\": \"Mechanical Keyboard - RGB\",\r\n    \"quantity\": 35,\r\n    \"price\": 47.00\r\n  },\r\n  {\r\n    \"id\": 3,\r\n    \"name\": \"27-inch Monitor - Ultra HD\",\r\n    \"quantity\": 18,\r\n    \"price\": 165.00\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/items/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"items",
+								"bulk"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Apr 2025 03:31:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"27-inch Monitor - Ultra HD\",\n        \"quantity\": 18,\n        \"price\": 165\n    }\n]"
+				}
+			]
 		}
 	]
 }
