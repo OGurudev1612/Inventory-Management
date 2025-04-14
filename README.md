@@ -1,11 +1,11 @@
 
-# 📦 Inventory Management System
+#  Inventory Management System
 
 A Spring Boot-based Inventory Management System that provides a RESTful API to manage inventory items with support for creating, reading, updating, deleting, and bulk operations.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Add, update, delete inventory items
 - Bulk add, update, delete support
@@ -15,23 +15,23 @@ A Spring Boot-based Inventory Management System that provides a RESTful API to m
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
-### 🔧 Prerequisites
+###  Prerequisites
 
 - Java 17+
 - Maven 3.6+
 - MySQL 8+
 - Postman (optional, for API testing)
 
-### 📁 Clone the Repository
+###  Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/inventory-management.git
 cd inventory-management
 ```
 
-### 🛠️ Configure MySQL
+###  Configure MySQL
 
 1. Start MySQL server
 2. Create the database:
@@ -49,7 +49,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 ```
 
-### 📦 Build & Run the Application
+###  Build & Run the Application
 
 ```bash
 mvn clean install
@@ -145,7 +145,7 @@ App will run at: `http://localhost:8080`
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Use Postman or CURL to test endpoints. You can also import the provided Postman collection file:
 `inventory.postman_collection.json`
