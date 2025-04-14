@@ -152,6 +152,4 @@ Use Postman or CURL to test endpoints. You can also import the provided Postman 
 
 ---
 
-## 📄 License
 
-This project is for educational and demo purposes.
