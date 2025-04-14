@@ -150,6 +150,8 @@ App will run at: `http://localhost:8080`
 Use Postman or CURL to test endpoints. You can also import the provided Postman collection file:
 `inventory.postman_collection.json`
 
+For Detailed documentation on using the API - https://documenter.getpostman.com/view/10983537/2sB2ca5z2d
+
 ---
 
 
