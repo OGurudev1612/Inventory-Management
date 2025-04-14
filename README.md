@@ -75,9 +75,9 @@ App will run at: `http://localhost:8080`
 
 ---
 
-## 📥 Usage Examples
+##  Usage Examples
 
-### ➕ Add Item
+###  Add Item
 
 **POST /items**
 
@@ -91,7 +91,7 @@ App will run at: `http://localhost:8080`
 
 ---
 
-### ➕ Bulk Add
+###  Bulk Add
 
 **POST /items/bulk**
 
@@ -112,7 +112,7 @@ App will run at: `http://localhost:8080`
 
 ---
 
-### 🔄 Bulk Update
+###  Bulk Update
 
 **PUT /items/bulk**
 
@@ -135,7 +135,7 @@ App will run at: `http://localhost:8080`
 
 ---
 
-### ❌ Bulk Delete
+###  Bulk Delete
 
 **DELETE /items/bulk**
 
@@ -148,7 +148,7 @@ App will run at: `http://localhost:8080`
 ## 🧪 Testing
 
 Use Postman or CURL to test endpoints. You can also import the provided Postman collection file:
-`Inventory_Management_API.postman_collection.json`
+`inventory.postman_collection.json`
 
 ---
 
